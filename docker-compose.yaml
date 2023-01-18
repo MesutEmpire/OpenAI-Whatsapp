@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  openai-whatsapp:
+    container_name: openai-whatsapp-container
+    build:
+      context: ./
+      target: production
+    image: openai-whatsapp-image
+    ports:
+      - 3000:3000
+    environment:
+      NODE_ENV: production
+    volumes:
+      - ./:/openai-whatsapp
+      - /openai-whatsapp/node_modules

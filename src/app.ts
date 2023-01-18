@@ -2,7 +2,6 @@ const { Configuration, OpenAIApi } = require("openai");
 import { Request, Response, NextFunction, Application } from "express";
 const express = require("express");
 const cors = require("cors");
-const body_parser = require("body-parser");
 const axios = require("axios").default;
 require("dotenv").config();
 
@@ -93,6 +92,6 @@ app.post("/webhook/whatsapp", (req: Request, res: Response) => {
   }
 });
 
-app.listen(process.env.PORT, () =>
+app.listen(process.env.PORT || 3000, () =>
   console.log("listening on port", process.env.PORT)
 );

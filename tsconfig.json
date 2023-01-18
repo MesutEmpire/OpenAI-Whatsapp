@@ -1,15 +1,17 @@
 {
   "compilerOptions": {
-    "lib": ["es2022"],
-    "target": "es2022",
-    "module": "es2022",
-    "outDir": "./public",
-    "rootDir": "./src",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "module": "commonjs",
+    "target": "es5",
+    "outDir": "public",
+
+    "sourceMap": true
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "public"]
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "public"
+  ]
 }
+
