@@ -26,6 +26,9 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 });
 
 // routes
+app.get("/", (req: Request, res: Response) => {
+  res.status(200).json(`Successfull hit to Openai-Whatsapp at path ${req.path}` )
+})
 app.get("/webhook/whatsapp", (req: Request, res: Response) => {
   const verify_token = process.env.VERIFY_TOKEN;
 
